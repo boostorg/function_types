@@ -16,11 +16,11 @@
 
 [def __unspecified__ /unspecified/]
 
-[def __mpl__ [@../../../mpl/index.html MPL]]
-[def __mpl_integral_constant__ __mpl__ - [@../../../mpl/doc/refmanual/integral-constant.html Integral Constant]]
-[def __mpl_fwd_seq__ __mpl__ - [@../../../mpl/doc/refmanual/forward-sequence.html Forward Sequence]]
-[def __mpl_fb_ext_ra_seq__ __mpl__ - [@../../../mpl/doc/refmanual/front-extensible-sequence.html Front] / [@../../../mpl/doc/refmanual/back-extensible-sequence.html Back ][@../../../mpl/doc/refmanual/extensible-sequence.html Extensible ][@../../../mpl/doc/refmanual/random-access-sequence.html Random Access Sequence]]
-[def __mpl_lambda_expression__  __mpl__ - [@../../../mpl/doc/refmanual/lambda-expression.html Lambda Expression]]
+[def __mpl__ [@/libs/mpl/index.html MPL]]
+[def __mpl_integral_constant__ __mpl__ - [@/libs/mpl/doc/refmanual/integral-constant.html Integral Constant]]
+[def __mpl_fwd_seq__ __mpl__ - [@/libs/mpl/doc/refmanual/forward-sequence.html Forward Sequence]]
+[def __mpl_fb_ext_ra_seq__ __mpl__ - [@/libs/mpl/doc/refmanual/front-extensible-sequence.html Front] / [@/libs/mpl/doc/refmanual/back-extensible-sequence.html Back ][@/libs/mpl/doc/refmanual/extensible-sequence.html Extensible ][@/libs/mpl/doc/refmanual/random-access-sequence.html Random Access Sequence]]
+[def __mpl_lambda_expression__  __mpl__ - [@/libs/mpl/doc/refmanual/lambda-expression.html Lambda Expression]]
 
 [def __is_function [link boost_functiontypes.reference.classification.is_function is_function]]
 [def __is_function_pointer [link boost_functiontypes.reference.classification.is_function_pointer is_function_pointer]]
@@ -148,9 +148,9 @@ instead:
   }
 
 The combination with a tuples library that provides an invoker component, such
-as [@../../../fusion/index.html Boost.Fusion], allows to build flexible callback 
+as [@/libs/fusion/index.html Boost.Fusion], allows to build flexible callback 
 facilities that are entirely free of repetitive code as shown by the 
-[@../../../function_types/example/interpreter.hpp interpreter example].
+[@/libs/function_types/example/interpreter.hpp interpreter example].
 
 When taking the address of an overloaded function or function template, the 
 type of the function must be known from the context the expression is used
@@ -192,15 +192,15 @@ This technique can be occasionally more flexible than template argument
 deduction from a function call because the exact types from the sequence
 are used to specialize the template (including possibly cv-qualified 
 reference types and the result type). It is applied twice in the 
-[@../../../function_types/example/interface.hpp interface example].
+[@/libs/function_types/example/interface.hpp interface example].
 
 Another interersting property of callable, builtin types is that they can be
 valid types for non-type template parameters. This way, a function can be 
 pinpointed at compile time, allowing the compiler to eliminate the call by 
 inlining. 
-The [@../../../function_types/example/fast_mem_fn.hpp fast_mem_fn example]
+The [@/libs/function_types/example/fast_mem_fn.hpp fast_mem_fn example]
 exploits this characteristic and implements a potentially inlining version of 
-[@../../../bind/mem_fn.html boost::mem_fn]
+[@/libs/bind/mem_fn.html boost::mem_fn]
 limited to member functions that are known at compile time. 
 
 [endsect]
@@ -862,9 +862,9 @@ the auto-detection mechanism in [^boost/function_types/config/compiler.hpp].]
 
 [section:BOOST_FT_CC_NAMES BOOST_FT_CC_NAMES]
 
-Expands to a [@../../../preprocessor/doc/data/sequences.html sequence] of 
-ternary [@../../../preprocessor/doc/data/tuples.html tuples] (these data 
-types are defined in the [@../../../preprocessor/doc/index.html
+Expands to a [@/libs/preprocessor/doc/data/sequences.html sequence] of 
+ternary [@/libs/preprocessor/doc/data/tuples.html tuples] (these data 
+types are defined in the [@/libs/preprocessor/doc/index.html
 documentation of the Boost Preprocessor library]). 
 Each sequence element describes one calling convention specifier.
 The first element in each tuple is the macro suffix for 
@@ -872,8 +872,8 @@ The first element in each tuple is the macro suffix for
 the second element is the name of the tag that describes the calling 
 convention and the third is the name of the specifier. 
 The specifier is allowed to be an empty string, so the third tuple element
-is either [@../../../preprocessor/doc/ref/empty.html [^BOOST_PP_EMPTY]] or 
-[@../../../preprocessor/doc/ref/identity.html [^BOOST_PP_IDENTITY]][^(['name])].
+is either [@/libs/preprocessor/doc/ref/empty.html [^BOOST_PP_EMPTY]] or 
+[@/libs/preprocessor/doc/ref/identity.html [^BOOST_PP_IDENTITY]][^(['name])].
 
 Define this macro to extend the set of possible names for custom calling
 conventions. The macro expands to nothing by default.
@@ -1013,10 +1013,10 @@ input can be spotted easily.
 MPL provides algorithms on Sequences, so transformations (such as turning
 by-value parameter types into const references for optimized forwarding
 or computing a signature to specialize 
-[@../../../function/index.html [^boost::function]] after applying 
-[@../../../bind/index.html [^boost::bind]]) can be expressed more 
+[@/libs/function/index.html [^boost::function]] after applying 
+[@/libs/bind/index.html [^boost::bind]]) can be expressed more 
 easily. The MPL Sequence concept is compatible with several other Boost 
-libraries (most importantly [@../../../fusion/index.html Fusion]), 
+libraries (most importantly [@/libs/fusion/index.html Fusion]), 
 so another reason is interoperability.
 
 
@@ -1075,7 +1075,7 @@ It was found preferable that the following condition holds:
 
 A cv-qualified pointer is still a pointer. It usually doesn't matter and
 even if it does, it's a job for 
-[@../../../type_traits/index.html Boost.TypeTraits]. 
+[@/libs/type_traits/index.html Boost.TypeTraits]. 
 
 
 [endsect]
