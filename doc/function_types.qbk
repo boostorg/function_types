@@ -897,7 +897,7 @@ definition of [^BOOST_FT_CC_NAMES]:
 
 [section:BOOST_FT_CC BOOST_FT\_CC\_*]
 
-Enables a specific calling convention. * dentoes the macro suffix, as 
+Enables a specific calling convention. * denotes the macro suffix, as 
 defined by
 [link boost_functiontypes.reference.macros.BOOST_FT_CC_NAMES [^BOOST_FT_CC_NAMES]] 
 or 
@@ -1086,6 +1086,7 @@ Thanks go to the following people for supporting the development of this
 library in one or the other way:
 
 * David Abrahams
+* Tom Brinkman
 * Aleksey Gurtovoy
 * Jody Hagins
 * Hartmut Kaiser 
@@ -1093,9 +1094,12 @@ library in one or the other way:
 * John Maddock 
 * Paul Mensonides
 * Alexander Nasonov
+* Richard Smith
 * Rob Stewart
 * Jonathan Turkanis
 * Pavel Vozenilek
+* Steven Watanabe
+* K. Noel Belcourt
 
 [endsect]
 
