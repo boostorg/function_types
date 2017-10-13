@@ -24,6 +24,7 @@ install:
   - cd boost-root
   - git submodule update --init tools/build
   - git submodule update --init libs/config
+  - git submodule update --init libs/tokenizer
   - git submodule update --init tools/boostdep
   - xcopy /s /e /q %APPVEYOR_BUILD_FOLDER% libs\function_types
   - python tools/boostdep/depinst/depinst.py function_types

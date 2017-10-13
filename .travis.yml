@@ -23,6 +23,7 @@ install:
   - cd boost-root
   - git submodule update --init --depth 1 tools/build
   - git submodule update --init --depth 1 libs/config
+  - git submodule update --init --depth 1 libs/tokenizer
   - git submodule update --init --depth 1 tools/boostdep
   - cp -r $TRAVIS_BUILD_DIR/* libs/function_types
   - python tools/boostdep/depinst/depinst.py function_types
