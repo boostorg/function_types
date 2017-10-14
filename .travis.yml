@@ -23,28 +23,28 @@ install:
   - cd boost-root
   - git submodule update --init --depth 1 tools/build
   - git submodule update --init --depth 1 libs/config
-  - git submodule update --init --depth 1 libs/tokenizer
-  - git submodule update --init --depth 1 libs/timer
-  - git submodule update --init --depth 1 libs/iterator
-  - git submodule update --init --depth 1 libs/lexical_cast
-  - git submodule update --init --depth 1 libs/bind
-  - git submodule update --init --depth 1 libs/array
-  - git submodule update --init --depth 1 libs/container
-  - git submodule update --init --depth 1 libs/integer
-  - git submodule update --init --depth 1 libs/math
-  - git submodule update --init --depth 1 libs/numeric/conversion
-  - git submodule update --init --depth 1 libs/range
-  - git submodule update --init --depth 1 libs/concept_check
-  - git submodule update --init --depth 1 libs/functional
-  - git submodule update --init --depth 1 libs/function
-  - git submodule update --init --depth 1 libs/move
-  - git submodule update --init --depth 1 libs/intrusive
-  - git submodule update --init --depth 1 libs/optional
-  - git submodule update --init --depth 1 libs/typeof
-  - git submodule update --init --depth 1 libs/assert
-  - git submodule update --init --depth 1 libs/type_index
-  - git submodule update --init --depth 1 libs/smart_ptr
-  - git submodule update --init --depth 1 tools/boostdep
+#  - git submodule update --init --depth 1 libs/tokenizer
+#  - git submodule update --init --depth 1 libs/timer
+#  - git submodule update --init --depth 1 libs/iterator
+#  - git submodule update --init --depth 1 libs/lexical_cast
+#  - git submodule update --init --depth 1 libs/bind
+#  - git submodule update --init --depth 1 libs/array
+#  - git submodule update --init --depth 1 libs/container
+#  - git submodule update --init --depth 1 libs/integer
+#  - git submodule update --init --depth 1 libs/math
+#  - git submodule update --init --depth 1 libs/numeric/conversion
+#  - git submodule update --init --depth 1 libs/range
+#  - git submodule update --init --depth 1 libs/concept_check
+#  - git submodule update --init --depth 1 libs/functional
+#  - git submodule update --init --depth 1 libs/function
+#  - git submodule update --init --depth 1 libs/move
+#  - git submodule update --init --depth 1 libs/intrusive
+#  - git submodule update --init --depth 1 libs/optional
+#  - git submodule update --init --depth 1 libs/typeof
+#  - git submodule update --init --depth 1 libs/assert
+#  - git submodule update --init --depth 1 libs/type_index
+#  - git submodule update --init --depth 1 libs/smart_ptr
+   - git submodule update --init --depth 1 tools/boostdep
   - cp -r $TRAVIS_BUILD_DIR/* libs/function_types
   - python tools/boostdep/depinst/depinst.py function_types
   - ./bootstrap.sh
