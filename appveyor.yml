@@ -35,6 +35,7 @@ install:
   - git submodule update --init libs/math
   - git submodule update --init libs/numeric/conversion
   - git submodule update --init libs/range
+  - git submodule update --init libs/concept_check
   - git submodule update --init tools/boostdep
   - xcopy /s /e /q %APPVEYOR_BUILD_FOLDER% libs\function_types
   - python tools/boostdep/depinst/depinst.py function_types
