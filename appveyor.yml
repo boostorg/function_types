@@ -27,6 +27,14 @@ install:
   - git submodule update --init libs/tokenizer
   - git submodule update --init libs/timer
   - git submodule update --init libs/iterator
+  - git submodule update --init libs/lexical_cast
+  - git submodule update --init libs/bind
+  - git submodule update --init libs/array
+  - git submodule update --init libs/container
+  - git submodule update --init libs/integer
+  - git submodule update --init libs/math
+  - git submodule update --init libs/numeric/conversion
+  - git submodule update --init libs/range
   - git submodule update --init tools/boostdep
   - xcopy /s /e /q %APPVEYOR_BUILD_FOLDER% libs\function_types
   - python tools/boostdep/depinst/depinst.py function_types
