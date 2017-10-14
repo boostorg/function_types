@@ -35,6 +35,15 @@ install:
   - git submodule update --init --depth 1 libs/numeric/conversion
   - git submodule update --init --depth 1 libs/range
   - git submodule update --init --depth 1 libs/concept_check
+  - git submodule update --init --depth 1 libs/functional
+  - git submodule update --init --depth 1 libs/function
+  - git submodule update --init --depth 1 libs/move
+  - git submodule update --init --depth 1 libs/intrusive
+  - git submodule update --init --depth 1 libs/optional
+  - git submodule update --init --depth 1 libs/typeof
+  - git submodule update --init --depth 1 libs/assert
+  - git submodule update --init --depth 1 libs/type_index
+  - git submodule update --init --depth 1 libs/smart_ptr
   - git submodule update --init --depth 1 tools/boostdep
   - cp -r $TRAVIS_BUILD_DIR/* libs/function_types
   - python tools/boostdep/depinst/depinst.py function_types
