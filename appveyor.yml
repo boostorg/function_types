@@ -26,7 +26,7 @@ install:
   - git submodule update --init libs/config
   - git submodule update --init tools/boostdep
   - xcopy /s /e /q %APPVEYOR_BUILD_FOLDER% libs\function_types
-  - python tools/boostdep/depinst/depinst.py function_types
+  - python tools/boostdep/depinst/depinst.py -I example function_types
   - bootstrap
   - b2 headers
 
