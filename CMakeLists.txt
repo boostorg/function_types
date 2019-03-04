@@ -5,15 +5,15 @@
 # NOTE: CMake support for Boost.FunctionTypes is currently experimental at best
 #       and the interface is likely to change in the future
 
-cmake_minimum_required(VERSION 3.5)
-project(Boost.FunctionTypes  LANGUAGES CXX)
+cmake_minimum_required( VERSION 3.5 )
+project( BoostFunctionTypes  LANGUAGES CXX )
 
-add_library(boost_function_types INTERFACE)
-add_library(Boost::function_types ALIAS boost_function_types)
+add_library( boost_function_types INTERFACE )
+add_library( Boost::function_types ALIAS boost_function_types )
 
-target_include_directories(boost_function_types INTERFACE include)
+target_include_directories( boost_function_types INTERFACE include )
 
-target_link_libraries(boost_function_types
+target_link_libraries( boost_function_types
     INTERFACE
         Boost::config
         Boost::core
