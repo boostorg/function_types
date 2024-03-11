@@ -1,0 +1,26 @@
+# Copyright René Ferdinand Rivera Morell 2023
+# Distributed under the Boost Software License, Version 1.0.
+# (See accompanying file LICENSE_1_0.txt or copy at
+# http://www.boost.org/LICENSE_1_0.txt)
+
+import project ;
+
+project /boost/function_types
+    : common-requirements
+        <source>/boost/config//boost_config
+        <source>/boost/core//boost_core
+        <source>/boost/detail//boost_detail
+        <source>/boost/mpl//boost_mpl
+        <source>/boost/preprocessor//boost_preprocessor
+        <source>/boost/type_traits//boost_type_traits
+        <include>include
+    ;
+
+explicit
+    [ alias boost_function_types ]
+    [ alias all : boost_function_types example test ]
+    ;
+
+call-if : boost-library function_types
+    : install boost_function_types
+    ;

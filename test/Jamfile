@@ -75,12 +75,14 @@ import testing ;
     
     # Code from the examples
 
-    [ compile ../example/interpreter_example.cpp ]
+    [ compile ../example/interpreter_example.cpp : <library>/boost/tokenizer//boost_tokenizer <library>/boost/lexical_cast//boost_lexical_cast ]
     [ compile ../example/result_of_example.cpp ]
     [ compile ../example/interface_example.cpp ]
     [ compile ../example/fast_mem_fn_example.cpp 
       # needed for Boost.PP file iteration with some compilers
       : <include>../example
+        <library>/boost/timer//boost_timer
+        <library>/boost/bind//boost_bind
     ]
     [ compile ../example/macro_type_args_example.cpp ]
     ;
