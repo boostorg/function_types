@@ -5,22 +5,25 @@
 
 require-b2 5.2 ;
 
+constant boost_dependencies :
+    /boost/config//boost_config
+    /boost/core//boost_core
+    /boost/detail//boost_detail
+    /boost/mpl//boost_mpl
+    /boost/preprocessor//boost_preprocessor
+    /boost/type_traits//boost_type_traits ;
+
 project /boost/function_types
     : common-requirements
-        <library>/boost/config//boost_config
-        <library>/boost/core//boost_core
-        <library>/boost/detail//boost_detail
-        <library>/boost/mpl//boost_mpl
-        <library>/boost/preprocessor//boost_preprocessor
-        <library>/boost/type_traits//boost_type_traits
         <include>include
     ;
 
 explicit
-    [ alias boost_function_types ]
+    [ alias boost_function_types : : : : <library>$(boost_dependencies) ]
     [ alias all : boost_function_types example test ]
     ;
 
 call-if : boost-library function_types
     : install boost_function_types
     ;
+
