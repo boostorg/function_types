@@ -6,6 +6,13 @@
 
 //------------------------------------------------------------------------------
 
+#if !defined(_M_IX86)
+
+#include <boost/config/pragma_message.hpp>
+BOOST_PRAGMA_MESSAGE("Test skipped because _M_IX86 is not defined")
+
+#else
+
 #define BOOST_FT_AUTODETECT_CALLING_CONVENTIONS
 
 #include <boost/mpl/assert.hpp>
@@ -58,5 +65,4 @@ BOOST_MPL_ASSERT_NOT((
   ft::is_callable_builtin< ft::function_pointer<mpl::vector<void> >::type, cc >
 ));
 
-
-
+#endif
