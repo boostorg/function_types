@@ -1,5 +1,5 @@
 
-# (C) Copyright Tobias Schwinger 
+# (C) Copyright Tobias Schwinger
 #
 # Use, modification and distribution are subject to the Boost Software License,
 # Version 1.0. (See http://www.boost.org/LICENSE_1_0.txt).
@@ -8,8 +8,10 @@
 
 import testing ;
 
+project : requirements <library>/boost/function_types//boost_function_types ;
+
 {
-  test-suite function_types : 
+  test-suite function_types :
 
     # Classification
 
@@ -28,7 +30,7 @@ import testing ;
     # [ compile classification/is_cv_function.cpp ]
 
     # Decomposition
-    
+
     [ compile decomposition/components.cpp ]
     [ compile decomposition/result_type.cpp ]
     [ compile decomposition/function_arity.cpp ]
@@ -70,17 +72,19 @@ import testing ;
     [ compile custom_ccs/member_ccs_exact.cpp : <address-model>64:<build>no ]
 
     # Property tag
-    
+
     [ compile custom_ccs/property_tag.cpp ]
-    
+
     # Code from the examples
 
-    [ compile ../example/interpreter_example.cpp ]
+    [ compile ../example/interpreter_example.cpp : <library>/boost/tokenizer//boost_tokenizer <library>/boost/lexical_cast//boost_lexical_cast ]
     [ compile ../example/result_of_example.cpp ]
     [ compile ../example/interface_example.cpp ]
-    [ compile ../example/fast_mem_fn_example.cpp 
+    [ compile ../example/fast_mem_fn_example.cpp
       # needed for Boost.PP file iteration with some compilers
       : <include>../example
+        <library>/boost/timer//boost_timer
+        <library>/boost/bind//boost_bind
     ]
     [ compile ../example/macro_type_args_example.cpp ]
     ;
