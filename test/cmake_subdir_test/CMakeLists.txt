@@ -22,7 +22,6 @@ type_traits
 # Secondary dependencies
 
 assert
-static_assert
 throw_exception
 predef
 utility
